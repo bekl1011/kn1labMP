@@ -62,6 +62,8 @@ sudo tee -a /etc/hosts << EOF
 10.0.0.3 sv1
 EOF
 
+sudo chown -R labrat /home/labrat/kn1labMP
+
 code --install-extension vscjava.vscode-java-pack
 code --install-extension ms-python.python
 code --install-extension ms-toolsai.jupyter
