@@ -1,4 +1,13 @@
 # Versuch 4 - Leistungsmessung
+## Disclaimer für Docker
+Bei diesem Versuch gibt es mit der Nutzung von Docker einige Dinge zu beachten:
+
+1. Plotten geht über Jupyter Notebooks. Dafür einfach den Pfad zu einer cnl-Datei in die vorgegebenen Befehle einsetzen und im Noebook ausführen.
+2. TCP Streams in den Aufgaben 1 und 2 benötigen weiteres flag. Die befehle für TCP benöttigen das flag `-w 32K`, damit verwendbare Daten gemessen werden. Ein `iperf3`-Befehl sieht dann beispielhaft so aus:
+```bash
+iperf3 -c <IP-Adresse des Servers> -Z -t <Dauer der Übertragung> -w 32K
+```
+3. Bei den Aufgaben 3 und 4 sollten Sie dieses Flag nicht setzen, da sonst wieder falsche Ergebnisse produziert werden könnten.
 
 ## Einführung
 
