@@ -16,3 +16,8 @@ sudo cp -r /home/labrat/kn1labMP/postfix/mailname /etc
 sudo service dovecot restart
 sudo service postfix restart
 
+code --install-extension vscjava.vscode-java-pack
+code --install-extension vscjava.vscode-maven
+code --install-extension ms-python.python
+code --install-extension ms-toolsai.jupyter
+
