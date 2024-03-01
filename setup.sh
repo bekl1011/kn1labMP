@@ -64,9 +64,10 @@ EOF
 
 sudo chown -R labrat /home/labrat/kn1labMP
 
-echo 'labrat:kn1lab' | chpasswd
+echo 'labrat:kn1lab' | sudo chpasswd
 
 code --install-extension vscjava.vscode-java-pack
 code --install-extension ms-python.python
 code --install-extension ms-toolsai.jupyter
+
 
