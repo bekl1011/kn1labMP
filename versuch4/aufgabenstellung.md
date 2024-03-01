@@ -1,13 +1,9 @@
 # Versuch 4 - Leistungsmessung
-## Disclaimer für Docker
-Bei diesem Versuch gibt es mit der Nutzung von Docker einige Dinge zu beachten:
+## Disclaimer für Visual Studio Code
+Bei diesem Versuch gibt es mit der Nutzung von Visual Studio ein paar Dinge zu beachten:
 
-1. Plotten geht über Jupyter Notebooks. Dafür einfach den Pfad zu einer cnl-Datei in die vorgegebenen Befehle einsetzen und im Noebook ausführen.
-2. TCP Streams in den Aufgaben 1 und 2 benötigen weiteres flag. Die befehle für TCP benöttigen das flag `-w 32K`, damit verwendbare Daten gemessen werden. Ein `iperf3`-Befehl sieht dann beispielhaft so aus:
-```bash
-iperf3 -c <IP-Adresse des Servers> -Z -t <Dauer der Übertragung> -w 32K
-```
-3. Bei den Aufgaben 3 und 4 sollten Sie dieses Flag nicht setzen, da sonst wieder falsche Ergebnisse produziert werden könnten.
+1. Plotten geht über Jupyter Notebooks. Dafür einfach den Pfad zu einer cnl-Datei in die vorgegebenen Befehle einsetzen und im Notebook ausführen.
+2. Für die Ausführung von Mininet wwerden Admin-Rechte benötigt. Wenn Sie also eines der gegebenen Python Skripte ausführen wollen, wird dies wegen dem Fehlen von `sudo` fehlschlagen. Entweder Sie kopieren den Befehl und fügen davor `sudo` hinzu oder Sie führen das Skript `/versuch4/scripts/runTopo.sh` in dem eben genannten Unterordner mit `./runTopo.sh <Skriptindex>` aus. Der Platzhalter Skriptindex repräsentiert dabei einen Eingabeparameter, mit dem Sie angeben können, welches der drei verfügbaren Mininet-Skripte ausgeführt werden soll (`1`, `2` oder `3`).
 
 ## Einführung
 
