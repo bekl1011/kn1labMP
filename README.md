@@ -23,11 +23,7 @@ multipass launch jammy --cpus 2 --disk 10G --memory 4G --cloud-init cloud-config
 ```
 
 ### Probleme bei der Authentifizierung von Multipass unter Linux
-Nach der Installation von multipass auf einem Linux Rechner kann es sein, dass Sie diesen für multipass authentifizieren müssen. Sollten Sie damit Schwierigkeiten haben, kann der folgende Link helfen:
-```url
-https://multipass.run/docs/authenticating-clients
-```
-
+Nach der Installation von multipass auf einem Linux Rechner kann es sein, dass Sie diesen für multipass authentifizieren müssen. Sollten Sie damit Schwierigkeiten haben, kann dieser [Link](https://multipass.run/docs/authenticating-clients) helfen.
 
 ## Aufgabenstellungen
 
