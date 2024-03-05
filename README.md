@@ -8,12 +8,19 @@ Sie benötigen zur Bearbeitung [Visual Studio Code (VS Code)](https://code.visua
 ```bash
 multipass launch jammy --cpus 2 --disk 10G --memory 4G --cloud-init cloud-config.yaml
 ```
-Sollte beim Aufsetzen der virtuellen Maschine unter Windows der folgende Fehler auftauchen: `launch failed: Multipass support for Hyper-V requires Windows 10 or newer`, dann können Sie die Virtualisierung auf Virtualbox mit dem folgenden Befehl umstellen:
+Mit dem Befehl `multipass info` Können Sie sich die IP-Adresse ihrer virtuellen Maschine ausgeben lassen. Mit dieser IP können Sie sich mit der Maschine über ssh verbinden, indem Sie diese als Host in Visual Studio Code anlegen. Dafür können Sie über den blauen Remote-Window-Knopf im linken unteren Eck mit der Option `Connect to Host` und der darauffolgenden Option `Add new SSH Host` unter Angabe von `ssh labrat@<IPAdresse>` die Einrichtung durchführen. Nach der Einrichtung können Sie sich mit der Maschine über deren Auswahl in der Option `Connect to Host` verbinden. Sobald Sie mit der Maschine verbunden sind, müssen Sie durch die Option `Open Folder` das Home-Verzeichnis Ihres Nutzers (`labrat`) öffnen und das Skript `setup.sh` im Unterordner `kn1lab` ausführen. Dafür müssen Sie ein Terminal öffnen, mit dem Befehl `cd kn1lab` in den Unterordner wechseln und das Skript mit `./setup.sh` ausführen. Dieses Skript setzt Ihre Umgebung final auf und installiert aauch alle benötigten Erweiterungen für Visual Studio Code, sodass Sie danach alle Versuche bearbeiten können.
+
+### Multipass mit Virtualbox
+Sollte beim Aufsetzen der virtuellen Maschine unter Windows der folgende Fehler auftauchen: `launch failed: Multipass support for Hyper-V requires Windows 10 or newer`, dann können Sie die Virtualisierung auf Virtualbox mit dem folgenden Befehl in einer Powershell mit Admin-Rechten umstellen:
 ```bash
 multipass set local.driver=virtualbox
 ```
-Mit dem Befehl `multipass info` Können Sie sich die IP-Adresse ihrer virtuellen Maschine ausgeben lassen. Mit dieser IP können Sie sich mit der Maschine über ssh verbinden, indem Sie diese als Host in Visual Studio Code anlegen. Dafür können Sie über den blauen Remote-Window-Knopf im linken unteren Eck mit der Option `Connect to Host` und der darauffolgenden Option `Add new SSH Host` unter Angabe von `ssh labrat@<IPAdresse>` die Einrichtung durchführen. Nach der Einrichtung können Sie sich mit der Maschine über deren Auswahl in der Option `Connect to Host` verbinden. Sobald Sie mit der Maschine verbunden sind, müssen Sie durch die Option `Open Folder` das Home-Verzeichnis Ihres Nutzers (`labrat`) öffnen und das Skript `setup.sh` im Unterordner `kn1lab` ausführen. Dafür müssen Sie ein Terminal öffnen, mit dem Befehl `cd kn1lab` in den Unterordner wechseln und das Skript mit `./setup.sh` ausführen. Dieses Skript setzt Ihre Umgebung final auf und installiert aauch alle benötigten Erweiterungen für Visual Studio Code, sodass Sie danach alle Versuche bearbeiten können.
+Nach dieser Änderung müssen Sie Ihren Computer neu starten.
 
+Bei der Verwendung von Virtualbox müssen Sie jedoch auch den Befehl zum Starten der Maschine ändern. SIe benötigen dafür den Namen ihres Netzwerks. Diesen können Sie mit `multipass networks` auslesen und müssen diesen dann in den untweren Befehl einsetzen. Ohne diese Änderung des Befehls ist SSH in Ihrer virtuellen Maschine nicht verfügbar.
+```bash
+multipass launch jammy --cpus 2 --disk 10G --memory 4G --cloud-init cloud-config.yaml --network name="<Netzwerk-Name>"
+```
 
 
 
