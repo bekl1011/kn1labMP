@@ -2,7 +2,6 @@ import java.io.*;
 import java.net.*;
 import java.time.Duration;
 import java.util.concurrent.*;
-import Packet;
 
 /**
  * Die "Klasse" Sender liest einen String von der Konsole und zerlegt ihn in einzelne Worte. Jedes Wort wird in ein
