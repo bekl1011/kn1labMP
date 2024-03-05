@@ -22,6 +22,11 @@ Bei der Verwendung von Virtualbox müssen Sie jedoch auch den Befehl zum Starten
 multipass launch jammy --cpus 2 --disk 10G --memory 4G --cloud-init cloud-config.yaml --network name="<Netzwerk-Name>"
 ```
 
+### Probleme bei der Authentifizierung von Multipass unter Linux
+Nach der Installation von multipass auf einem Linux Rechner kann es sein, dass Sie diesen für multipass authentifizieren müssen. Sollten Sie damit Schwierigkeiten haben, kann der folgende Link helfen:
+```url
+https://multipass.run/docs/authenticating-clients
+```
 
 
 ## Aufgabenstellungen
