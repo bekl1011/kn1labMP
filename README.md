@@ -27,7 +27,8 @@ multipass launch jammy --cpus 2 --disk 10G --memory 4G --cloud-init cloud-config
 
 ### Probleme bei der Authentifizierung von Multipass unter Linux/Mac
 Nach der Installation von multipass auf einem Linux Rechner kann es sein, dass Sie diesen für multipass authentifizieren müssen. Sollten Sie damit Schwierigkeiten haben, kann dieser [Link](https://multipass.run/docs/authenticating-clients) helfen.
-Sollten Sie mit dieser ANleitung mit Ihrem Mac nicht weiterkommen, kann der Workaround aus diesem [GitHub-Issue](https://github.com/canonical/multipass/issues/2549) helfen:
+
+Sollten Sie mit dieser Anleitung mit einem Mac nicht weiterkommen, kann der Workaround aus diesem [GitHub-Issue](https://github.com/canonical/multipass/issues/2549) helfen:
 
 Stop the daemon: `sudo launchctl unload /Library/LaunchDaemons/com.canonical.multipassd.plist`
 
