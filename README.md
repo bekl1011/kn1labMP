@@ -25,8 +25,14 @@ Bei der Verwendung von Virtualbox müssen Sie jedoch auch den Befehl zum Starten
 multipass launch jammy --cpus 2 --disk 10G --memory 4G --cloud-init cloud-config.yaml --network name="<Netzwerk-Name>"
 ```
 
-### Probleme bei der Authentifizierung von Multipass unter Linux
+### Probleme bei der Authentifizierung von Multipass unter Linux/Mac
 Nach der Installation von multipass auf einem Linux Rechner kann es sein, dass Sie diesen für multipass authentifizieren müssen. Sollten Sie damit Schwierigkeiten haben, kann dieser [Link](https://multipass.run/docs/authenticating-clients) helfen.
+Sollten Sie mit dieser ANleitung mit Ihrem Mac nicht weiterkommen, kann der Workaround aus diesem  helfen:
+
+Stop the daemon: `sudo launchctl unload /Library/LaunchDaemons/com.canonical.multipassd.plist`
+Delete `/var/root/Library/Application\ Support/multipassd/authenticated-certs/multipass_client_certs.pem`
+Copy your user's public cert: `sudo cp ~/Library/Application\ Support/multipass-client-certificate/multipass_cert.pem /var/root/Library/Application\ Support/multipassd/authenticated-certs/multipass_client_certs.pem`
+Start the daemon: `sudo launchctl load /Library/LaunchDaemons/com.canonical.multipassd.plist`
 
 ## Aufgabenstellungen
 
