@@ -59,10 +59,6 @@ def start(loss):
     sshd(net)
     os.system('ethtool -K s1-eth1 tso off')
     os.system('ethtool -K s2-eth1 tso off')
-    os.system('ssh -o "StrictHostKeyChecking no" root@sv1 ethtool -K sv1-eth2 tso off')
-    os.system('ssh -o "StrictHostKeyChecking no" root@sv1 ethtool -K sv1-eth1 tso off')
-    os.system('ssh -o "StrictHostKeyChecking no" root@c1 ethtool -K c1-eth1 tso off')
-    os.system('ssh -o "StrictHostKeyChecking no" root@c2 ethtool -K c2-eth1 tso off')
     
     CLI(net)
     net.stop()
