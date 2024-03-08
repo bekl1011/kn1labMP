@@ -1,18 +1,18 @@
 #delete all existing dovecot and postfix config files and replace them with the config fils from the repo
 sudo rm -rf /etc/postfix
-sudo cp -r /home/labrat/kn1labMP/msConfig/postfix /etc
+sudo cp -r /home/labrat/kn1lab/msConfig/postfix /etc
 sudo rm -rf /etc/dovecot
-sudo cp -r /home/labrat/kn1labMP/msConfig/dovecot /etc
+sudo cp -r /home/labrat/kn1lab/msConfig/dovecot /etc
 sudo rm -rf /etc/aliases
-sudo cp -r /home/labrat/kn1labMP/msConfig/aliases /etc
+sudo cp -r /home/labrat/kn1lab/msConfig/aliases /etc
 sudo rm -rf /etc/aliases.db
-sudo cp -r /home/labrat/kn1labMP/msConfig/aliases.db /etc
+sudo cp -r /home/labrat/kn1lab/msConfig/aliases.db /etc
 sudo rm -rf /etc/mailcap
-sudo cp -r /home/labrat/kn1labMP/msConfig/mailcap /etc
+sudo cp -r /home/labrat/kn1lab/msConfig/mailcap /etc
 sudo rm -rf /etc/mailcap.order
-sudo cp -r /home/labrat/kn1labMP/msConfig/mailcap.order /etc
+sudo cp -r /home/labrat/kn1lab/msConfig/mailcap.order /etc
 sudo rm -rf /etc/mailname
-sudo cp -r /home/labrat/kn1labMP/msConfig/mailname /etc
+sudo cp -r /home/labrat/kn1lab/msConfig/mailname /etc
 
 #After giving the new config files restart the services
 sudo service dovecot restart
@@ -66,7 +66,7 @@ sudo tee -a /etc/hosts << EOF
 EOF
 
 #Whn the vm is started, the owning rights for the files are wrong, so they can not be edited, unless the rights are changed
-sudo chown -R labrat /home/labrat/kn1labMP
+sudo chown -R labrat /home/labrat/kn1lab
 
 #The password is necessary to use postfix, which is why it is set here
 echo 'labrat:kn1lab' | sudo chpasswd
