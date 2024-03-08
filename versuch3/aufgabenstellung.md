@@ -2,7 +2,7 @@
 
 ## Hinweise zur Bearbeitung mit Visual Studio Code
 
-Für die Ausführung von Mininet wwerden Admin-Rechte benötigt. Wenn Sie also eines der gegebenen Python Skripte ausführen wollen, wird dies wegen dem Fehlen von `sudo` fehlschlagen. Entweder Sie kopieren den Befehl und fügen davor `sudo` hinzu oder Sie führen das Skript `/versuch3/scripts/runTopo.sh` in dem eben genannten Unterordner mit `./runTopo.sh` aus.
+Für die Ausführung von Mininet werden Admin-Rechte benötigt. Wenn Sie also eines der gegebenen Python Skripte ausführen wollen, wird dies wegen dem Fehlen von `sudo` fehlschlagen. Entweder Sie kopieren den Befehl und fügen davor `sudo` hinzu oder Sie führen das Skript `/versuch3/scripts/runTopo.sh` in dem eben genannten Unterordner mit `./runTopo.sh` aus.
 
 ## Generelle Hinweise
 
