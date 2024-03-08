@@ -30,7 +30,7 @@ runcmd:
  - [ pip3, install, ipykernel ]
  - [ git, clone, https://github.com/bekl1011/CPUnetPLOT ]
  - [ cd, /home/labrat]
- - [ git, clone, https://github.com/bekl1011/kn1labMP ]
+ - [ git, clone, https://github.com/bekl1011/kn1lab ]
  - [ mkdir, -m, 777, /home/labrat/Maildir]
  - [ mkdir, -m, 777, /home/labrat/Maildir/new]
  - [ mkdir, -m, 777, /home/labrat/Maildir/cur]
